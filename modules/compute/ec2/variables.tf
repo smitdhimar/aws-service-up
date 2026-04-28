@@ -1,11 +1,3 @@
-variable "globalConfigs" {
-  type = object({
-    environment =  string
-    region      =  string
-    appName     =  string
-  })
-}
-
 variable "ec2Configurations" {
   type = list(object({
     ec2_count         = number
@@ -14,4 +6,12 @@ variable "ec2Configurations" {
     ec2_key_name      = string
     ec2_name_prefix   = string
   }))    
+}
+
+variable "globalConfigs" {
+  type = object({
+    environment =  string
+    region      =  string
+    appName     =  string
+  })
 }
